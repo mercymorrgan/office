@@ -1,0 +1,284 @@
+/*
+    The base styles shared by the default.aspx, errorpage.aspx and signuppage.aspx
+    The only thing required on the aspx is the definition of the font families
+    */
+
+* {
+    padding:0px;
+    margin:0px;
+    border:0px;
+}
+
+html {
+    height:100%;
+}
+
+body {
+    height:100%;
+}
+
+.rootTable {
+    width:100%;
+    height:100%;
+}
+
+.header {
+    overflow:hidden;
+    vertical-align:top;
+    height:40px;
+}
+
+.headerTable {
+    width:100%;
+}
+
+.infoColumn {
+    background-color:rgb(0, 114, 198);
+}
+
+.infoTable {
+    width:100%;
+}
+
+.defaultColumn {
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.defaultColumnWithWrap {
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.stretchColumn {
+    width:100%;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.brandingColumn {
+}
+
+.brandingText {
+    font-family:'Segoe UI Regular';
+    font-size:13px;
+    color:#FFFFFF;
+    margin-left:18px;
+    margin-right:0px;
+}
+
+.branding-image {
+    margin-left: 30px;
+    margin-top:2px;
+    max-height: 30px;
+}
+
+body[dir=rtl] .brandingText {
+    margin-left:0px;
+    margin-right:18px;
+}
+
+.usernameColumn {
+    text-align:right;
+}
+
+body[dir=rtl] .usernameColumn {
+    text-align:left;
+}
+
+.usernameText {
+    font-family:'Segoe UI Regular';
+    font-size:13px;
+    color:#FFFFFF;
+    margin-left:0px;
+    margin-right:20px;
+}
+
+body[dir=rtl] .usernameText {
+    margin-right:0px;
+    margin-left:20px;
+}
+
+.signoutColumn {
+}
+
+.signoutButton {
+    background-color:rgb(234, 236, 238);
+    cursor:pointer;
+    height:40px;
+}
+
+.signoutButton:hover {
+    background-color:rgb(256, 256, 256);
+    cursor:pointer;
+    height:40px;
+}
+
+.signoutHeaderText {
+    margin-left:20px;
+    margin-right:20px;
+    font-family:'Segoe UI Regular';
+    font-size:13px;
+    color:#666666;
+    text-align:center
+}
+
+.helpColumn {
+}
+
+.helpButton {
+    background-color:rgb(234, 236, 238);
+    cursor:pointer;
+    width:29px;
+    height:40px;
+}
+
+.helpButton:hover {
+    background-color:rgb(256, 256, 256);
+    cursor:pointer;
+    width:29px;
+    height:40px;
+}
+
+@supports ( -moz-appearance:none ){
+   .helpButton:focus {
+        outline: 1px solid black;
+    }
+    .helpButton {
+        background-color:rgb(234, 236, 238);
+        cursor:pointer;
+        width:29px;
+        height:40px;
+        margin: 1px;
+    }
+}
+
+.content {
+    vertical-align:top;
+}
+
+.footer {
+    overflow:hidden;
+    vertical-align:bottom;
+}
+
+.fullFooterTable {
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:20px;
+    padding-right:20px;
+    width:100%;
+}
+
+.centerFooterTable {
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-left:auto;
+    margin-right:auto;
+    width:65%;
+}
+
+.dividerColumn {
+}
+
+.divider {
+    height:1px;
+    background-color:#EAECEE;
+    margin-bottom:8px;
+}
+
+.hostedColumn {
+}
+
+.hostedTable {
+    margin-bottom:15px;
+}
+
+.lockColumn {
+    text-align:center;
+    vertical-align:middle;
+}
+
+.lock {
+}
+
+.hostedTextColumn {
+}
+
+.hostedText {
+    font-family:'Segoe UI Semilight';
+    font-size:13px;
+    color:#666666;
+}
+
+.logoColumn {
+    width:170px;
+    height:70px;
+    text-align:left;
+    vertical-align:middle;
+}
+
+body[dir=rtl] .logoColumn {
+    text-align:right;
+}
+
+.logo {
+}
+
+.e4eContainer {
+    margin-top:100px;
+    margin-bottom:100px;
+    margin-left:auto;
+    margin-right:auto;
+    width:65%;
+}
+
+.e4eTopMessageBar {
+    position: absolute;
+    margin-top: 40px;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    width: 100%;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    font-family:'Segoe UI Regular';
+    font-size:13px;
+}
+
+.e4eTopMessageBarContainer {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.e4eDialogButton {
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    color: black;
+    background-color: lightgray;
+}
+
+.e4eDialogButtonLTR {
+    float: right;
+    margin-left: 20px;
+}
+
+.e4eDialogButtonRTL {
+    float: left;
+    margin-right: 20px;
+}
+
+.e4eDialogCancelButton {
+    color: black;
+    background-color: rgb(234, 236, 238);
+}
+
+.e4eDialogActionButton {
+    color: white;
+    background-color: rgb(0, 114, 198);
+}

